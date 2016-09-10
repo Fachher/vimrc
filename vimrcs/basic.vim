@@ -53,6 +53,9 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Show always line number
+set number
+
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
@@ -142,11 +145,11 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme desert
+    colorscheme vim_colors_lucid
 catch
 endtry
 
-set background=dark
+set background=light
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -162,7 +165,11 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-
+" Show always file path
+set statusline+=%F
+set ls=2
+set exrc
+set secure
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
